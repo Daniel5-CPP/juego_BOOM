@@ -106,6 +106,104 @@ numero++;
 }
 }
 void JuegoMult7( char jugadores[2][20]){
+int numero = 1, vidasJ1 = 3, vidasJ2 = 3;
+char respuesta[10] = "1",jugada[10];
+
+printf("Preparence para jugar...\n");
+Sleep(2000);
+system("cls");
+int turno = rand() % 2;
+if (turno == 0) {
+printf("El jugador %s empieza primero\n", jugadores[0]);
+//Ciclo para el juego
+do{
+    //Comprobacion de si el numero es multiplo de 7
+    if(numero % 7 == 0){
+        strcpy(respuesta, "BOOM");
+    }else{
+        sprintf(respuesta, "%d", numero);
+    }
+    //Turno del jugador 1
+printf("Turno de: %s\n", jugadores[0]);
+scanf("%s", jugada);
+if (_stricmp(jugada, respuesta) == 0) {
+    printf("Correcto!\n");
+    Sleep(1000);
+    system("cls");
+}else{
+    printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
+    vidasJ1--;
+    Sleep(1000);
+    system("cls");
+}
+numero++;
+//Comprobacion de si el numero es multiplo de 7
+if(numero % 7 == 0){
+        strcpy(respuesta, "BOOM");
+    }else{
+        sprintf(respuesta, "%d", numero);
+    }
+//Turno del jugador 2
+printf("Turno de: %s\n", jugadores[1]);
+scanf("%s", jugada);
+if (_stricmp(jugada, respuesta) == 0) {
+    printf("Correcto!\n");
+    Sleep(1000);
+    system("cls");
+}else{
+    printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
+    vidasJ2--;
+    Sleep(1000);
+    system("cls");
+}
+numero++;
+}while (vidasJ1 > 0 && vidasJ2 > 0);
+} else {
+printf("El jugador %s empieza primero\n", jugadores[1]);
+do{
+    //Comprobacion de si el numero es multiplo de 7
+    if(numero % 7 == 0){
+        strcpy(respuesta, "BOOM");
+    }else{
+        sprintf(respuesta, "%d", numero);
+    }
+    //Turno del jugador 1
+printf("Turno de: %s\n", jugadores[1]);
+scanf("%s", jugada);
+if (_stricmp(jugada, respuesta) == 0) {
+    printf("Correcto!\n");
+    Sleep(1000);
+    system("cls");
+}else{
+    printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
+    vidasJ1--;
+    Sleep(1000);
+    system("cls");
+}
+numero++;
+//Comprobacion de si el numero es multiplo de 7
+if(numero % 7 == 0){
+        strcpy(respuesta, "BOOM");
+    }else{
+        sprintf(respuesta, "%d", numero);
+    }
+//Turno del jugador 2
+printf("Turno de: %s\n", jugadores[0]);
+scanf("%s", jugada);
+if (_stricmp(jugada, respuesta) == 0) {
+    printf("Correcto!\n");
+    Sleep(1000);
+    system("cls");
+}else{
+    printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
+    vidasJ2--;
+    Sleep(1000);
+    system("cls");
+}
+numero++;
+}while (vidasJ1 > 0 && vidasJ2 > 0);
+
+}
 
 }
 int main(){
