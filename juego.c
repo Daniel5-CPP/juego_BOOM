@@ -33,10 +33,14 @@ if (_stricmp(jugada, respuesta) == 0) {
 }else{
     printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
     vidasJ1--;
+    printf("Vidas restantes de %s: %d\n", jugadores[0], vidasJ1);
     Sleep(1000);
     system("cls");
 }
 numero++;
+if(vidasJ1 <= 0){
+    break;
+}
 //Comprobacion de si el numero es multiplo de 3
 if(numero % 3 == 0){
         strcpy(respuesta, "BOOM");
@@ -53,6 +57,7 @@ if (_stricmp(jugada, respuesta) == 0) {
 }else{
     printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
     vidasJ2--;
+    printf("Vidas restantes de %s: %d\n", jugadores[1], vidasJ2);
     Sleep(1000);
     system("cls");
 }
@@ -67,7 +72,7 @@ do{
     }else{
         sprintf(respuesta, "%d", numero);
     }
-    //Turno del jugador 1
+    //Turno del jugador 2
 printf("Turno de: %s\n", jugadores[1]);
 scanf("%s", jugada);
 if (_stricmp(jugada, respuesta) == 0) {
@@ -76,18 +81,22 @@ if (_stricmp(jugada, respuesta) == 0) {
     system("cls");
 }else{
     printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
-    vidasJ1--;
+    vidasJ2--;
+    printf("Vidas restantes de %s: %d\n", jugadores[1], vidasJ2);
     Sleep(1000);
     system("cls");
 }
 numero++;
+if(vidasJ2 <= 0){
+    break;
+}
 //Comprobacion de si el numero es multiplo de 3
 if(numero % 3 == 0){
         strcpy(respuesta, "BOOM");
     }else{
         sprintf(respuesta, "%d", numero);
     }
-//Turno del jugador 2
+//Turno del jugador 1
 printf("Turno de: %s\n", jugadores[0]);
 scanf("%s", jugada);
 if (_stricmp(jugada, respuesta) == 0) {
@@ -96,7 +105,8 @@ if (_stricmp(jugada, respuesta) == 0) {
     system("cls");
 }else{
     printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
-    vidasJ2--;
+    vidasJ1--;
+    printf("Vidas restantes de %s: %d\n", jugadores[0], vidasJ1);
     Sleep(1000);
     system("cls");
 }
@@ -134,10 +144,14 @@ if (_stricmp(jugada, respuesta) == 0) {
 }else{
     printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
     vidasJ1--;
+    printf("Vidas restantes de %s: %d\n", jugadores[0], vidasJ1);
     Sleep(1000);
     system("cls");
 }
 numero++;
+if(vidasJ1 <= 0){
+    break;
+}
 //Comprobacion de si el numero es multiplo de 7
 if(numero % 7 == 0){
         strcpy(respuesta, "BOOM");
@@ -154,6 +168,7 @@ if (_stricmp(jugada, respuesta) == 0) {
 }else{
     printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
     vidasJ2--;
+    printf("Vidas restantes de %s: %d\n", jugadores[1], vidasJ2);
     Sleep(1000);
     system("cls");
 }
@@ -168,7 +183,7 @@ do{
     }else{
         sprintf(respuesta, "%d", numero);
     }
-    //Turno del jugador 1
+    //Turno del jugador 2
 printf("Turno de: %s\n", jugadores[1]);
 scanf("%s", jugada);
 if (_stricmp(jugada, respuesta) == 0) {
@@ -177,18 +192,22 @@ if (_stricmp(jugada, respuesta) == 0) {
     system("cls");
 }else{
     printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
-    vidasJ1--;
+    vidasJ2--;
+    printf("Vidas restantes de %s: %d\n", jugadores[1], vidasJ2);
     Sleep(1000);
     system("cls");
 }
 numero++;
+if(vidasJ2 <= 0){
+    break;
+}
 //Comprobacion de si el numero es multiplo de 7
 if(numero % 7 == 0){
         strcpy(respuesta, "BOOM");
     }else{
         sprintf(respuesta, "%d", numero);
     }
-//Turno del jugador 2
+//Turno del jugador 1
 printf("Turno de: %s\n", jugadores[0]);
 scanf("%s", jugada);
 if (_stricmp(jugada, respuesta) == 0) {
@@ -197,7 +216,8 @@ if (_stricmp(jugada, respuesta) == 0) {
     system("cls");
 }else{
     printf("Incorrecto! la respuesta correcta es: %s\n", respuesta);
-    vidasJ2--;
+    vidasJ1--;
+    printf("Vidas restantes de %s: %d\n", jugadores[0], vidasJ1);
     Sleep(1000);
     system("cls");
 }
