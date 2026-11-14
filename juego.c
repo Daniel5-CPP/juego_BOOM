@@ -4,7 +4,7 @@
 #include <windows.h>
 #include <time.h>
 
-//Funcion para iniciar el juego
+//Funcion para iniciar el juego en el modo de multiplos de 3
 void JuegoMult3( char jugadores[2][20]){ 
 int numero = 1, vidasJ1 = 3, vidasJ2 = 3;
 char respuesta[10] = "1",jugada[10];
@@ -105,6 +105,7 @@ numero++;
 
 }
 }
+//Funcion para iniciar el juego en el modo de multiplos de 7
 void JuegoMult7( char jugadores[2][20]){
 int numero = 1, vidasJ1 = 3, vidasJ2 = 3;
 char respuesta[10] = "1",jugada[10];
